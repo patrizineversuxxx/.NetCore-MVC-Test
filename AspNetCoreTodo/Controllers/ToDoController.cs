@@ -13,6 +13,7 @@ namespace AspNetCoreTodo.Controllers
         {
             _todoItemService = todoItemService;
         }
+
         public async Task<IActionResult> Index()
         {
             var items = await _todoItemService.GetIncompleteItemsAsync();
